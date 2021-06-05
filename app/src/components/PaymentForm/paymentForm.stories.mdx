@@ -1,0 +1,25 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+
+import { Elements, ElementsConsumer } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import PaymentForm from "../PaymentForm";
+
+<Meta title="Library/Payment Form" />
+
+# Payment Form
+
+<Story name="Payment Form">
+  <Elements stripe={loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)}>
+    <ElementsConsumer>
+      {({ stripe, elements }) => (
+        <PaymentForm
+          stripe={stripe}
+          elements={elements}
+          orderId={1}
+          price={1234}
+          onOrderPayed={false}
+        />
+      )}
+    </ElementsConsumer>
+  </Elements>
+</Story>

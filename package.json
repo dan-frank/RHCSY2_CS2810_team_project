@@ -1,0 +1,26 @@
+{
+  "name": "team18_restaurant_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker:build": "docker-compose -p team18_app build",
+    "docker:up": "docker-compose -p team18_app up -d",
+    "docker:up:attached": "docker-compose -p team18_app up",
+    "docker:down": "docker-compose -p team18_app down",
+    "docker:down:volumes": "docker-compose -p team18_app down --volumes",
+    "docs:all": "npm run docs:api && npm run docs:app",
+    "docs:api": "cd api && npm run apidoc",
+    "docs:app": "cd app && npm run storybook",
+    "test:api:setup": "docker rm --force team18_db_test && docker rm --force team18_api && rimraf db/data_test && npm run docker:build && npm run docker:up",
+    "test:api:mocha": "docker exec -it team18_api npm run test",
+    "test:api": "npm run test:api:setup && delay 15 && npm run test:api:mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "delay-cli": "^1.1.0",
+    "rimraf": "^3.0.2"
+  }
+}

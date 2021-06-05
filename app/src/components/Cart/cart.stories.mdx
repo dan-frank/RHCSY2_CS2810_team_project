@@ -1,0 +1,36 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+
+import Cart from "./index";
+
+<Meta title="Library/Cart" />
+
+# Cart
+
+<Story name="Empty Cart">
+  <Cart
+    menuItems={[]}
+    onCartItemIncrement={() => {
+      alert("Increment menu item!");
+    }}
+    onCartItemDecrement={() => {
+      alert("Decrement menu item!");
+    }}
+  />
+</Story>
+
+## Cart With Items
+
+<Story name="Cart With Items">
+  <Cart
+    menuItems={[
+      { id: 1, count: 1 },
+      { id: 2, count: 2 },
+    ]}
+    onCartItemIncrement={() => {
+      alert("Increment menu item!");
+    }}
+    onCartItemDecrement={() => {
+      alert("Decrement menu item!");
+    }}
+  />
+</Story>

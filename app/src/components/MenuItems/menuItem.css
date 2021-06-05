@@ -1,0 +1,19 @@
+.Image {
+  width: 300px;
+  float: left;
+  padding: 0 10px 0 0;
+}
+.content {
+  padding-bottom: -90px;
+}
+.calories h3 {
+  font-weight: 700;
+  padding-top: -10px;
+}
+.description {
+  text-align: justify;
+  justify-content: center;
+  padding-right: 40px;
+  padding-top: 9px;
+  margin-right: 100px;
+}

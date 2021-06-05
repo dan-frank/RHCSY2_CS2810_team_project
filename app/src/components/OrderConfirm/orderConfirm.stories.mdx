@@ -1,0 +1,127 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+
+import OrderConfirmMeta from "./meta";
+import Status from "./status";
+
+<Meta title="Library/Order Confirmation" />
+
+# Order Confirmation Meta
+
+<Story name="Meta">
+  <OrderConfirmMeta
+    order={{
+      id: 2,
+      table_number: 22,
+      price: 2897,
+      discount: 0,
+      final_price: 2897,
+      comment: "This is a test order",
+      order_status_id: 2,
+      ordered_at: "2021-03-09T22:33:30.546Z",
+      food_ready_at: null,
+      updated_at: "2021-03-09T22:33:30.546Z",
+    }}
+  />
+</Story>
+
+# Order Confirmation Status
+
+## Status Preparing
+
+<Story name="Status Preparing">
+  <Status
+    order={{
+      id: 2,
+      table_number: 22,
+      price: 2897,
+      discount: 0,
+      final_price: 2897,
+      comment: "This is a test order",
+      order_status_id: 1,
+      ordered_at: "2021-03-09T22:33:30.546Z",
+      food_ready_at: null,
+      updated_at: "2021-03-09T22:33:30.546Z",
+    }}
+    orderStatusId={1}
+  />
+</Story>
+
+## Status Prepared
+
+<Story name="Status Prepared">
+  <Status
+    order={{
+      id: 2,
+      table_number: 22,
+      price: 2897,
+      discount: 0,
+      final_price: 2897,
+      comment: "This is a test order",
+      order_status_id: 2,
+      ordered_at: "2021-03-09T22:33:30.546Z",
+      food_ready_at: null,
+      updated_at: "2021-03-09T22:33:30.546Z",
+    }}
+    orderStatusId={2}
+  />
+</Story>
+
+## Status Delivered
+
+<Story name="Status Delivered">
+  <Status
+    order={{
+      id: 2,
+      table_number: 22,
+      price: 2897,
+      discount: 0,
+      final_price: 2897,
+      comment: "This is a test order",
+      order_status_id: 3,
+      ordered_at: "2021-03-09T22:33:30.546Z",
+      food_ready_at: null,
+      updated_at: "2021-03-09T22:33:30.546Z",
+    }}
+    orderStatusId={3}
+  />
+</Story>
+
+## Status Cancelled
+
+<Story name="Status Cancelled">
+  <Status
+    order={{
+      id: 2,
+      table_number: 22,
+      price: 2897,
+      discount: 0,
+      final_price: 2897,
+      comment: "This is a test order",
+      order_status_id: 4,
+      ordered_at: "2021-03-09T22:33:30.546Z",
+      food_ready_at: null,
+      updated_at: "2021-03-09T22:33:30.546Z",
+    }}
+    orderStatusId={4}
+  />
+</Story>
+
+## Status (No Status)
+
+<Story name="Status (No Status)">
+  <Status
+    order={{
+      id: 2,
+      table_number: 22,
+      price: 2897,
+      discount: 0,
+      final_price: 2897,
+      comment: "This is a test order",
+      order_status_id: -1,
+      ordered_at: "2021-03-09T22:33:30.546Z",
+      food_ready_at: null,
+      updated_at: "2021-03-09T22:33:30.546Z",
+    }}
+    orderStatusId={-1}
+  />
+</Story>

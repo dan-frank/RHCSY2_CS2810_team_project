@@ -1,0 +1,94 @@
+.button
+    border: 0
+    color: $white
+    transition: 3ms ease-out
+
+    &:hover
+        color: $white
+
+    &--main
+        background: $red
+
+        &:hover
+            background: darken($red, 20)
+
+    &--starter
+        background: $green
+        
+        &:hover
+            background: darken($green, 20)
+
+    &--desert
+        background: $purple
+        
+        &:hover
+            background: darken($purple, 20)
+    &--reset
+        background: $black
+
+        &:hover
+            background: darken($black, 20)
+
+.menuItem
+    display: flex
+    align-items: center
+
+    &--main
+        .title
+            color: red
+
+    &--starter
+        .title
+            color: green
+
+    &--desert
+        .title
+            color: purple
+
+    &--disabled
+        .title,
+        p
+            color: grayscale(#7fffd4)
+
+        .button
+            background: grey
+
+            &:hover
+                darken(grey, 20)
+
+    &__meta
+        flex: 1 1 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+
+        &__description
+            flex: 0 0 100%
+
+    &__image
+        flex: 0 0 20%
+        margin-right: 1rem
+
+    &__content
+        flex: 1 1 100%
+
+    &__button
+        margin-left: 1rem
+        flex: 0 1 10%
+
+    &__purchase
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+
+.allergies
+    .allergy
+        &:after
+            content: ", "
+
+    .allergy
+        &:last-child
+            &:after
+                content: ""

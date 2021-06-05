@@ -1,0 +1,29 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+
+import WaiterMenuItems from "./index";
+import WaiterMenuItem from "./waiterMenuItem";
+
+<Meta title="Library/Waiter Menu Items" />
+
+# Waiter Menu Items
+
+TODO - Add story for menu items
+
+# Waiter Menu Item
+
+<Story name="Waiter Menu Item">
+  <WaiterMenuItem
+    menuItem={{
+      id: 1,
+      category_id: 2,
+      category_name: "Main",
+      category_slug: "main",
+      title: "Grilled Onion & Skirt Steak Tacos",
+      description:
+        "I grew up watching my grandmother and mother in the kitchen. My grandparents came from Mexico, and this steak marinated in beer and lime juice honors their passion for cooking. It’s a must in my house when we’re craving traditional Mexican food. —Adan Franco, Milwaukee, Wisconsin",
+      calories: "288",
+      price: "1299",
+      deleted: false,
+    }}
+  />
+</Story>

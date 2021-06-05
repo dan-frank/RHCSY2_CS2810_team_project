@@ -1,0 +1,109 @@
+.cart
+    position: fixed
+    z-index: 20
+    right: 0
+    top: 0
+    height: 100vh
+    background: white
+    width: 300px
+    max-width: 100%
+    box-shadow: 0 -2px 4px rgba(0,0,0,.16)
+    transition: .2s ease-out
+    transform: translateX(100%)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    &--active
+        transform: translateX(0)
+    
+    &__top
+        flex: 0 0 auto
+        border-bottom: 2px solid whitesmoke
+
+    &__middle
+        flex: 1 1 100%
+        overflow-y: scroll
+
+    &__bottom
+        flex: 0 0 auto
+        border-top: 2px solid whitesmoke
+
+    &__item
+        border-bottom: 2px solid whitesmoke
+        padding: .75rem 1rem
+
+        &:last-of-type
+            border-bottom: none
+
+        &__meta
+            width: 100%
+            margin-bottom: .5rem
+
+            tr
+                td
+                    width: 50%
+
+                    &:first-of-type
+                        padding-left: .25rem
+
+            tfoot
+                tr
+                    td
+                        padding-top: .25rem
+                        font-weight: bold
+
+        &__controls
+            width: 100%
+            display: flex
+
+        &__control
+            flex: 1 1 100%
+
+            &:first-of-type
+                border-top-right-radius: 0
+                border-bottom-right-radius: 0
+
+            &:last-of-type
+                border-top-left-radius: 0
+                border-bottom-left-radius: 0
+
+    &__checkout
+        padding: .75rem 1rem
+
+    &__toggle
+        padding: .5rem 1rem
+        text-align: right
+        font-size: 1.4rem
+        border-bottom: 2px solid whitesmoke
+
+.cart_toggle
+    position: fixed
+    z-index: 10
+    right: 1.25rem
+    bottom: 1.25rem
+
+    width: 50px
+    height: 50px
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    background: white
+    border-radius: $radius
+    box-shadow: 0 2px 4px rgba(0,0,0,.16)
+    
+    &__total
+        position: absolute
+        top: 0
+        right: 0
+        transform: translate(50%, -50%)
+        padding: .1rem .65rem
+        border-radius: $radius-rounded
+        overflow: hidden
+        background: red
+        color: white
+        text-align: center
+        vertical-align: center
+        font-weight: bold

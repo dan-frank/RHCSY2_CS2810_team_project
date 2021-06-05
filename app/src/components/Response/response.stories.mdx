@@ -1,0 +1,44 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+
+import Response from "./index";
+
+<Meta title="Library/Responses" />
+
+# Success Responses
+
+<Story name="Success Responses">
+  <Response
+    responses={[
+      "This is a successful response",
+      "This is another successful response",
+    ]}
+    responseStatus={"success"}
+  />
+</Story>
+
+# Error Responses
+
+<Story name="Error Responses">
+  <Response
+    responses={["This is a failed response", "This is another failed response"]}
+    responseStatus={"fail"}
+  />
+</Story>
+
+# Warning Responses
+
+<Story name="Warning Responses">
+  <Response
+    responses={[
+      "This is a warning response",
+      "This is another warning response",
+    ]}
+    responseStatus={"warning"}
+  />
+</Story>
+
+# Empty Responses
+
+<Story name="Empty Responses">
+  <Response responses={[]} responseStatus={""} />
+</Story>

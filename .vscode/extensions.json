@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "pranaygp.vscode-css-peek",
+    "ms-azuretools.vscode-docker",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-vscode-remote.remote-containers",
+    "syler.sass-indented",
+    "burkeholland.simple-react-snippets",
+    "davidbabel.vscode-simpler-icons",
+    "eg2.vscode-npm-script",
+    "deepcode.deepcode",
+    "silvenon.mdx",
+    "xyc.vscode-mdx-preview"
+  ]
+}

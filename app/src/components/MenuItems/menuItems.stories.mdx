@@ -1,0 +1,117 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+
+import MenuItems from "./index";
+import MenuItem from "./menuItem";
+import MenuItemInput from "./menuItemInput";
+
+<Meta title="Library/Menu Items" />
+
+# Menu Items
+
+<Story name="Menu Items">
+  <MenuItems
+    onAddMenuItemToCart={() => {
+      alert("Added to cart");
+    }}
+  />
+</Story>
+
+## Menu Items Filtered Starters
+
+<Story name="Menu Items Filtered Starters">
+  <MenuItems
+    category={"Starter"}
+    onAddMenuItemToCart={() => {
+      alert("Added to cart");
+    }}
+  />
+</Story>
+
+## Menu Items Filtered Mains
+
+<Story name="Menu Items Filtered Mains">
+  <MenuItems
+    category={"Main"}
+    onAddMenuItemToCart={() => {
+      alert("Added to cart");
+    }}
+  />
+</Story>
+
+## Menu Items Filtered Deserts
+
+<Story name="Menu Items Filtered Deserts">
+  <MenuItems
+    category={"Desert"}
+    onAddMenuItemToCart={() => {
+      alert("Added to cart");
+    }}
+  />
+</Story>
+
+## Menu Items
+
+<Story name="Menu Item">
+  <MenuItem
+    onAddMenuItemToCart={() => {
+      alert("Added to cart");
+    }}
+    menuItem={{
+      id: 1,
+      category_id: 2,
+      category_name: "Main",
+      category_slug: "main",
+      title: "Grilled Onion & Skirt Steak Tacos",
+      description:
+        "I grew up watching my grandmother and mother in the kitchen. My grandparents came from Mexico, and this steak marinated in beer and lime juice honors their passion for cooking. It’s a must in my house when we’re craving traditional Mexican food. —Adan Franco, Milwaukee, Wisconsin",
+      calories: "288",
+      price: "1299",
+      deleted: false,
+    }}
+  />
+</Story>
+
+## Menu Item Input
+
+<Story name="Menu Item Input">
+  <MenuItemInput
+    menuItem={{
+      id: 1,
+      category_id: 2,
+      category_name: "Main",
+      category_slug: "main",
+      title: "Grilled Onion & Skirt Steak Tacos",
+      description:
+        "I grew up watching my grandmother and mother in the kitchen. My grandparents came from Mexico, and this steak marinated in beer and lime juice honors their passion for cooking. It’s a must in my house when we’re craving traditional Mexican food. —Adan Franco, Milwaukee, Wisconsin",
+      calories: "288",
+      price: "1299",
+      deleted: false,
+    }}
+    categories={[
+      {
+        id: 1,
+        name: "Starter",
+        slug: "starter",
+        description: "A starter is...",
+        created_at: "2021-03-09T22:33:30.491Z",
+        updated_at: "2021-03-09T22:33:30.491Z",
+      },
+      {
+        id: 2,
+        name: "Main",
+        slug: "main",
+        description: "A main is...",
+        created_at: "2021-03-09T22:33:30.491Z",
+        updated_at: "2021-03-09T22:33:30.491Z",
+      },
+      {
+        id: 3,
+        name: "Desert",
+        slug: "desert",
+        description: "A desert is...",
+        created_at: "2021-03-09T22:33:30.491Z",
+        updated_at: "2021-03-09T22:33:30.491Z",
+      },
+    ]}
+  />
+</Story>

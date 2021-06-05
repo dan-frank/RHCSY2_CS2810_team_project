@@ -1,0 +1,60 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+
+import CategoryButtons from "./index";
+import CategoryButton from "./categoryButton";
+
+<Meta title="Library/Category Buttons" />
+
+# Category Buttons
+
+<Story name="Category Buttons">
+  <CategoryButtons
+    handleCategoryButtonClick={() => {
+      alert("Sorted");
+    }}
+  />
+</Story>
+
+## Starter Button
+
+<Story name="Starter Button">
+  <CategoryButton
+    button={{ slug: "starter", name: "Starter" }}
+    onClick={() => {
+      alert("Sorted Starter");
+    }}
+  />
+</Story>
+
+## Main Button
+
+<Story name="Main Button">
+  <CategoryButton
+    button={{ slug: "main", name: "Main" }}
+    onClick={() => {
+      alert("Sorted Main");
+    }}
+  />
+</Story>
+
+## Desert Button
+
+<Story name="Desert Button">
+  <CategoryButton
+    button={{ slug: "desert", name: "Desert" }}
+    onClick={() => {
+      alert("Sorted Desert");
+    }}
+  />
+</Story>
+
+## Reset Button
+
+<Story name="Reset Button">
+  <CategoryButton
+    button={{ slug: "reset", name: "Reset" }}
+    onClick={() => {
+      alert("Reset Filters");
+    }}
+  />
+</Story>

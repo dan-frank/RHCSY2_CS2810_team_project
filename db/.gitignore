@@ -1,0 +1,7 @@
+# vscode
+.dccache
+
+# database
+/data
+/data_test
+/db_manager

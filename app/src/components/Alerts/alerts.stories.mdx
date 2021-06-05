@@ -1,0 +1,28 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+
+import Alerts from "./index";
+import Alert from "./Alert";
+
+<Meta title="Library/Alerts" />
+
+# Alerts
+
+<Story name="Alerts">
+  <Alerts
+    alerts={["Alert 1", "Alert 2", "Alert 3"]}
+    onDelete={() => {
+      alert("Deleted alert");
+    }}
+  />
+</Story>
+
+# Alert
+
+<Story name="Alert">
+  <Alert
+    alert={"Alert 1"}
+    onDelete={() => {
+      alert("Deleted alert");
+    }}
+  />
+</Story>
