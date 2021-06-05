@@ -1,0 +1,12 @@
+# vscode
+.dccache
+*/.dccache
+**/*/.dccache
+
+# eslint
+.eslintcache
+*/.eslintcache
+**/*/.eslintcache
+
+# dependencies
+/node_modules
